@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduPulse • Learning Center</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-app: #f4f6f8;
+      --card: #ffffff;
+      --soft-border: #e9ecef;
+      --text: #202124;
+      --muted: #5f6368;
+      --brand: #4285f4;
+      --brand-700: #3367d6;
+      --chip-bg: #f1f5ff;
+    }
+
+    /* Page shell */
+    body { background:#2d2d30; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); }
+    .app-shell { background: var(--bg-app); min-height: 100vh; border-radius: 14px; overflow: clip; }
+
+    /* Sidebar */
+    .sidebar { background: #fff; border-right: 1px solid var(--soft-border); }
+    .sidebar .logo { color: var(--brand); font-weight: 700; font-size: 16px; }
+    .sidebar .nav-link { color: #5f6368; padding:.85rem 1rem; border-radius: .75rem; display:flex; align-items:center; gap:.75rem; }
+    .sidebar .nav-link:hover { background:#f3f7ff; color: #1a56db; }
+    .sidebar .nav-link.active { background:#eaf2ff; color:#1a56db; font-weight:600; }
+
+    /* Header */
+    .content-header { background: #fff; border-bottom: 1px solid var(--soft-border); }
+    .content-header h1 { font-size: 22px; margin:0; }
+    .content-header p { color: var(--muted); margin:0; font-size: 14px; }
+
+    /* Category chips */
+    .chips { gap:.5rem; overflow:auto; white-space:nowrap; padding: .75rem 0; }
+    .chip { background: var(--chip-bg); color:#0b3360; border:1px solid #d9e6ff; padding:.5rem .9rem; border-radius: .65rem; font-size: 13px; font-weight:600; }
+    .chip.active { background: var(--brand); border-color: var(--brand); color:#fff; }
+
+    /* Top tab nav */
+    .subnav .nav-link { color: var(--muted); border:0; border-bottom:2px solid transparent; border-radius:0; padding: .75rem 0; margin-right:1.25rem; font-weight:600; }
+    .subnav .nav-link.active { color:#1a56db; border-bottom-color: var(--brand); }
+
+    /* Cards */
+    .card-clean { border:1px solid var(--soft-border); border-radius:12px; }
+    .quiz-card h5 { font-size: 18px; margin-bottom:.4rem; }
+    .quiz-card p { color: var(--muted); font-size: 14px; }
+    .quiz-meta { color: var(--muted); gap:1rem; font-size: 14px; }
+    .score-dot { width:14px; height:14px; border-radius:999px; background:#fdd835; display:inline-block; }
+    .btn-brand { background: var(--brand); color:#fff; border:0; }
+    .btn-brand:hover { background: var(--brand-700); color:#fff; }
+
+    /* Right chat column */
+    .ai-pane { background:#fff; border-left:1px solid var(--soft-border); height:100%; position: sticky; top:0; }
+    .ai-bubble { background:#f8f9fa; border:1px solid var(--soft-border); padding:.75rem .9rem; border-radius:.75rem; font-size:14px; color:var(--text); }
+
+    /* Utilities */
+    .badge-soft { font-size: 12px; border-radius: 999px; font-weight: 600; padding:.25rem .6rem; }
+    .bg-beginner { background:#e8f5e8; color:#2e7d32; }
+    .bg-intermediate { background:#fff3e0; color:#f57c00; }
+
+    /* Small screens */
+    @media (max-width: 991.98px) {
+      .ai-col { display:none; }
+    }
+
+    @media (max-width: 575.98px) {
+      .content-header .see-all { position: static !important; transform:none !important; margin-top:.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-3 p-sm-4 app-shell">
+    <div class="row g-0">
+      <!-- Sidebar (desktop) -->
+      <aside class="col-lg-2 d-none d-lg-block sidebar p-3">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <i class="fa-solid fa-graduation-cap text-primary"></i>
+          <span class="logo">EduPulse</span>
+        </div>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#"><i class="fa-regular fa-calendar"></i><span>Study Plan</span></a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-robot"></i><span>AI Chat Bot</span></a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-chart-line"></i><span>Performance</span></a>
+          <a class="nav-link active" href="#"><i class="fa-solid fa-book"></i><span>Learning</span></a>
+          <a class="nav-link" href="#"><i class="fa-regular fa-circle-question"></i><span>Help Desk</span></a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <main class="col-12 col-lg-7">
+        <!-- Mobile topbar -->
+        <div class="d-lg-none d-flex align-items-center justify-content-between mb-2">
+          <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+          <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-graduation-cap text-primary"></i><strong>EduPulse</strong></div>
+          <span></span>
+        </div>
+
+        <!-- Header -->
+        <section class="content-header px-3 px-sm-4 py-3 position-relative rounded-3 mb-2">
+          <div>
+            <h1>Learning Center</h1>
+            <p>Access your study materials, videos, and practice tests</p>
+          </div>
+          <a href="#" class="see-all position-absolute top-50 end-0 translate-middle-y me-3 me-sm-4 text-decoration-none fw-semibold" style="color:#1976d2">See all</a>
+        </section>
+
+        <!-- Category chips row -->
+        <section class="bg-white border-bottom" style="border-color:var(--soft-border)!important;">
+          <div class="px-3 px-sm-4 chips d-flex">
+            <button class="chip active">UI/UX Designing</button>
+            <button class="chip">Mern stack</button>
+            <button class="chip">Python</button>
+            <button class="chip">Flutter</button>
+            <button class="chip">Data</button>
+          </div>
+        </section>
+
+        <!-- Sub navigation -->
+        <section class="bg-white subnav px-3 px-sm-4 d-flex align-items-center justify-content-between border-bottom" style="border-color:var(--soft-border)!important;">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="#">Video Lessons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Notes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Quizzes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Practice Tests</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Suggested Topics</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 text-secondary py-2">
+            <button class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-filter"></i></button>
+          </div>
+        </section>
+
+        <!-- Quizzes -->
+        <section class="p-3 p-sm-4">
+          <!-- Math -->
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <h2 class="h6 m-0">Mathematics</h2>
+            <span class="badge-soft bg-beginner">Beginner</span>
+          </div>
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6">
+              <article class="card-clean quiz-card p-3 p-sm-4 h-100">
+                <h5>Calculus Basics Quiz</h5>
+                <p>Test your understanding of derivatives, integrals, and limits.</p>
+                <div class="d-flex quiz-meta mb-2">
+                  <span><i class="fa-regular fa-circle-question me-1"></i>15 Questions</span>
+                  <span><i class="fa-regular fa-clock me-1"></i>30 Minutes</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="score-dot"></span>
+                  <span class="text-muted">Best Score: 92%</span>
+                </div>
+                <button class="btn btn-brand w-100 start-quiz-btn">Start Quiz</button>
+              </article>
+            </div>
+          </div>
+
+          <!-- Physics -->
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <h2 class="h6 m-0">Physics</h2>
+            <span class="badge-soft bg-intermediate">Intermediate</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <article class="card-clean quiz-card p-3 p-sm-4 h-100">
+                <h5>Quantum Mechanics Quiz</h5>
+                <p>Challenge yourself with wave functions and quantum states.</p>
+                <div class="d-flex quiz-meta mb-2">
+                  <span><i class="fa-regular fa-circle-question me-1"></i>20 Questions</span>
+                  <span><i class="fa-regular fa-clock me-1"></i>45 Minutes</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="score-dot"></span>
+                  <span class="text-muted">Best Score: 85%</span>
+                </div>
+                <button class="btn btn-brand w-100 start-quiz-btn">Start Quiz</button>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- AI Pane -->
+      <aside class="col-lg-3 ai-col">
+        <div class="ai-pane p-3 p-sm-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="rounded-circle d-inline-flex align-items-center justify-content-center bg-primary text-white" style="width:32px;height:32px;font-weight:700;">AI</div>
+            <div>
+              <div class="fw-bold">EduPulse AI</div>
+              <div class="text-secondary small">Your Smart Learning Buddy</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-2 mb-3" id="chatMessages">
+            <div class="ai-bubble">Hello! I'm here to help you with your studies. What would you like to learn about today?</div>
+            <div class="ai-bubble">Can you explain calculus derivatives in simple terms?</div>
+            <div class="ai-bubble">Sure! Think of a derivative as the rate of change. Imagine you're driving – the derivative tells you how fast your speed is changing at any moment. It's like the speedometer of any changing quantity!</div>
+          </div>
+          <div class="position-relative">
+            <input id="chatInput" class="form-control rounded-pill pe-5" placeholder="Ask me anything..." />
+            <button id="chatSend" class="btn btn-brand rounded-circle position-absolute top-50 end-0 translate-middle-y me-1" style="width:32px;height:32px"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Mobile Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-graduation-cap text-primary"></i><strong>EduPulse</strong></div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="nav flex-column">
+        <a class="nav-link" href="#"><i class="fa-regular fa-calendar me-2"></i>Study Plan</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-robot me-2"></i>AI Chat Bot</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-chart-line me-2"></i>Performance</a>
+        <a class="nav-link active" href="#"><i class="fa-solid fa-book me-2"></i>Learning</a>
+        <a class="nav-link" href="#"><i class="fa-regular fa-circle-question me-2"></i>Help Desk</a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-gear me-2"></i>Settings</a>
+      </nav>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Start quiz button demo
+    document.querySelectorAll('.start-quiz-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const original = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Starting...';
+        setTimeout(() => { btn.disabled = false; btn.innerHTML = original; }, 1200);
+      });
+    });
+
+    // Simple chat demo
+    const messages = [
+      "That's a great question! Let me help you with that.",
+      "I'll explain it step by step.",
+      "Based on your progress, start with the basics.",
+      "Want a few practice problems?",
+      "Here's a helpful tip that might clarify things for you."
+    ];
+
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const chatMessages = document.getElementById('chatMessages');
+
+    function addBubble(text, user=false){
+      const div = document.createElement('div');
+      div.className = 'ai-bubble';
+      if(user){ div.style.background = '#e3f2fd'; div.style.textAlign='right'; }
+      div.textContent = text;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function send(){
+      const v = chatInput.value.trim();
+      if(!v) return;
+      addBubble(v, true);
+      chatInput.value = '';
+      const typing = document.createElement('div');
+      typing.className = 'ai-bubble';
+      typing.style.fontStyle='italic';
+      typing.textContent = 'AI is typing…';
+      chatMessages.appendChild(typing);
+      setTimeout(()=>{
+        typing.remove();
+        addBubble(messages[Math.floor(Math.random()*messages.length)]);
+      }, 900);
+    }
+
+    chatSend.addEventListener('click', send);
+    chatInput.addEventListener('keydown', e=>{ if(e.key==='Enter') send(); });
+  </script>
+</body>
+</html>

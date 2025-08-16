@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+        height: 700px; width: 600px;
+          display: grid;
+          grid-template-columns: auto auto  auto auto;
+          column-gap: 30px;
+          row-gap: 30px;
+          background-color: rgb(212, 210, 210);
+          text-align: center;
+          
+          /* box-shadow: 5px 5px rgb(188, 187, 187); */
+        }
+        .a{
+          grid-column-start: 1; 
+          grid-column-end: 5;
+          padding: 50px;
+          background-color: #f5f6f7; 
+    
+          
+        }
+        .b{
+          grid-column-start: 1; 
+          grid-column-end: 5; 
+          background-color: #9accef;
+          padding: 30px;
+        box-shadow: 5px 5px rgb(188, 187, 187);
+        }
+        .c{
+  background-color: #9accef;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+   box-shadow: 5px 5px rgb(188, 187, 187);
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="a"> </div>
+        <div class="c">1</div>
+        <div class="c">2</div>
+        <div class="c">3</div>
+        <div class="c">+</div>
+        <div class="c">4</div>
+        <div class="c">5</div>
+        <div class="c">6</div>
+        <div class="c">-</div>
+        <div class="c">7</div>
+        <div class="c">8</div>
+        <div class="c">9</div>
+        <div class="c">X</div>
+        <div class="c">CE</div>
+        <div class="c">0</div>
+        <div class="c">.</div>
+        <div class="c">/</div>
+        <div class="b">=</div>
+    
+    </div>
+</body>
+</html>

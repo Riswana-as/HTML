@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .green{
+            background-color: green;
+            color: white;
+            height: 45px;
+       
+        }
+        li{ 
+            position: relative;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .services{
+            position: relative;
+            /* display: block; */
+        }
+        .hover{
+            display: none;
+            position: absolute;
+            background-color: green;
+            min-width: 150px;
+            text-decoration: dotted;
+            top: 100%;
+            z-index: 1;
+            
+            
+        }
+      
+        .services:hover .hover{
+            display: block;
+        }
+        .hover a{
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        ul{
+            padding-top: 12px;
+        }
+        .b{
+            background-image: url(./note.jpeg);
+            background-size: cover;
+            height: 550px;
+        }
+        a {
+           color: rgb(235, 232, 232);
+           text-decoration: none;
+        }
+        .android{
+            position: relative;
+            
+        }
+        .hover1{
+           display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: green;
+            min-width: 150px;
+            z-index: 1;  
+            text-decoration: none;
+        }
+        /* .android:hover{
+                        background-color: rgb(32, 178, 32);
+        } */
+        .android:hover  .hover1{
+             display: block;
+        }
+        
+    </style>
+</head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <div class="main">
+        
+        <div class="green">
+          <ul style="list-style-type: none; display: flex; justify-content: space-between; padding-right: 35px;">
+            <li><i class="fa-solid fa-house" style="color: #fafafa;"></i> Home</li>
+             <li><i class="fa-solid fa-user" style="color: #fafcff;"></i>About Us</li>
+             <div class="services">
+              <li><i class="fa-solid fa-file" style="color: #fafcff;"></i>Services</li>
+              <div class="hover">
+                <a href="" style="text-decoration: dotted;">Web Designing<br><br></a>
+                <a href="">Marketing    > <br><br></a>
+                 <!-- </div> -->
+                   <div class="android">
+                     <a href="">Mobile App    > </a>
+                    <div class="hover1">
+                    <a href="">Android App<br><br></a>
+                    <a href="">iOS App<br><br></a>
+                    <a href="">Iconic App<br><br></a>
+                    <a href="">Flutter App<br><br></a>
+                    <a href=""l>Unity App<br><br></a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+               <li><i class="fa-solid fa-people-group" style="color: #fcfcfc;"></i>Clients</li>
+                <li><i class="fa-solid fa-hand-peace" style="color: #ffffff;"></i>Investers</li>
+                 <li><i class="fa-solid fa-indian-rupee-sign" style="color: #ffffff;"></i>Pricing</li>
+                 <li><i class="fa-solid fa-pen-to-square" style="color: #f7f7f7;"></i>Training</li>
+                 <li><i class="fa-solid fa-pen-to-square" style="color: #f7f7f7;"></i>Contact</li>
+          </ul>
+        </div>
+        <div class="b">
+
+        </div>
+    </div>
+</body>
+</html>

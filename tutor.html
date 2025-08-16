@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tutor Spot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #ddd;
+    }
+   
+    .logo {
+      font-size: 24px;
+      color: #da852f;
+      font-weight: bold;
+    }
+
+    .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .nav a i {
+      margin-left: 10px;
+    }
+
+    .hero {
+      background: url('./lap.jpg') no-repeat center center;
+      background-size: cover;
+      height: 400px;
+      color: white;
+      padding: 80px 60px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .hero p {
+      max-width: 550px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      background-color: #f15a29;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .about {
+      display: flex;
+      padding: 60px;
+      gap: 40px;
+    }
+
+    .about-text {
+      width: 50%;
+    }
+
+    .about-text h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .about-text button {
+      background-color: #fbfbfb;
+      color: rgb(10, 10, 10);
+      padding: 10px 20px;
+      
+    }
+
+    .about-img {
+      width: 50%;
+    }
+
+    .about-img img {
+      width: 90%;
+      height: 300px;
+    }
+
+    .testimonial {
+      background-color: #e86f2e;
+      color: white;
+      text-align: center;
+      padding: 40px 80px;
+    }
+
+    .testimonial p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 15px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px;
+      gap: 20px;
+    }
+
+    .service {
+      width: 30%;
+      text-align: center;
+    }
+
+    .service img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .service button {
+      background-color: #efefef;
+      color: rgb(13, 13, 13);
+      
+      padding: 8px 16px;
+    }
+
+    .contact {
+      background-color: #004d40;
+      color: white;
+      padding: 60px;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 60px;
+    }
+
+    .contact-left {
+      width: 40%;
+    }
+
+    .contact-left p {
+      margin-bottom: 15px;
+    }
+
+    .contact-right {
+      width: 60%;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      background-color: rgb(8, 177, 158);
+    }
+
+    .contact-right button {
+      padding: 10px 20px;
+      background-color: #f15a29;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+
+    .footer {
+      background-color: #eeeeee;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer i {
+      color: #00796b;
+      margin-left: 10px;
+    }
+     @media (max-width:800px){
+        .header{
+            display: flex;
+            flex-direction: column;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+        }
+        .services{
+            display: flex;
+            flex-direction: column;
+        }
+        .hero{
+            display: flex;
+            flex-direction: column;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"><i class="fa-solid fa-pencil" style="color: #0d419c;"></i>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />The Tutor Spot</div>
+    <div class="nav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#"><i class="fab fa-twitter"style="color: #065e84;"></i></a>
+      <a href="#"><i class="fab fa-facebook"style="color: #065e84;"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram" style="color: #065e84;"></i></a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Toronto’s most trusted tutoring</h1>
+    <p>A place where learners thrive through 1-on-1 and group sessions. Friendly staff and comfortable atmosphere make learning easy.</p>
+    <button>Book your appointment</button>
+  </div>
+
+  <!-- About -->
+  <div class="about">
+    <div class="about-text">
+      <h2>About us</h2>
+      <p>Warm, caring and unique tutoring styles set us apart in Toronto. Here your child gets help in a way that suits them best.</p>
+      <p>Our expert tutors help with reading, writing, numeracy, science, etc. Our mission: make learning easy and enjoyable!</p>
+      <button>Learn more</button>
+    </div>
+    <div class="about-img">
+      <img src="./bean.jpg" alt="About us">
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <div class="testimonial">
+    <p>“The Tutor Spot in Toronto has been a great help to our family. Our son was struggling in school and they were able to help him catch up and even get ahead. The staff is caring and competent and we would recommend them to anyone.”</p>
+    <strong>- Heather, Toronto</strong>
+  </div>
+
+  <!-- Services -->
+  <div class="services">
+    <div class="service">
+      <img src="thee.jpg" alt="Online tutoring">
+      <h3>Online tutoring</h3>
+      <p>We bring tutoring to your student – even if you can’t come in. Safe and effective sessions.</p>
+      <button>Learn more</button>
+    </div>
+    <div class="service">
+      <img src="thee.jpg" alt="Test prep">
+      <h3>Test preparation</h3>
+      <p>Get ready for exams with full support. We help students build confidence and ace their tests.</p>
+      <button>Learn more</button>
+    </div>
+    <div class="service">
+      <img src="thee.jpg" alt="Homework help">
+      <h3>Homework support</h3>
+      <p>Whether tackling a tough subject or catching up, we’ll guide students with their assignments.</p>
+      <button>Learn more</button>
+    </div>
+  </div>
+
+  
+  <div class="contact">
+   
+      <div class="contact-left">
+        <h2>Book a consultation with us</h2>
+        <p>We’ll contact you within 24 hours to schedule your first appointment and answer any questions.</p>
+        <p>1234 Education Street, Toronto, ON M1A 2B3</p>
+        <p>Call us at: (416) 123-4567</p>
+      </div>
+      <div class="contact-right">
+        <form>
+            <label for="">Name</label><br>
+          <input type="text" placeholder="" required><br>
+          <label for="">Email</label><br>
+          <input type="email" placeholder="" required><br>
+          <label for="">Message</label>
+          <textarea placeholder="" rows="5" required></textarea><br>
+          <!-- <button type="submit">Submit</button> -->
+        </form>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div style="color: #0d419c;"><i class="fa-solid fa-pencil" style="color: #0d419c;"></i>The Tutor Spot</div>
+    <div>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fa-brands fa-instagram" style="color: #065e84;"></i>
+    </div>
+  </div>
+
+</body>
+</html>

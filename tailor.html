@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            background-color: white;
+            
+        }
+        .nav ul li{
+           list-style-type: none; 
+           display: flex;
+           gap: 3px;
+        }
+        .design{
+            display: flex;
+            max-width: 100%;
+            background-color: rgb(139, 49, 49);
+            
+           
+        }
+        .design-text{
+           padding-top: 50px;
+            padding-left: 70px;
+           padding-bottom: 70px; 
+            max-width: 500%;
+            padding-right: 200px;
+            
+           
+        }
+        .design-text h2{
+            color: white;
+            font-size: 30px;   
+        }
+        .design-text button{
+            background-color: white;
+            color: rgb(132, 42, 42);
+            width: 170px;
+            height: 30px;
+            border: none;
+            font-weight: bold;
+            
+        }
+        img{
+            height: 300px;
+            width: 350px;
+             
+        }
+        .section{
+            background-color: rgb(254, 247, 247) ;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: flex;              
+            justify-content: center;     
+            flex-wrap: wrap;             
+            align-items: center;
+            text-align: center;
+            
+
+            
+        }
+        .section button{
+            height: 150px;
+            width: 190px;
+            background-color: white;
+            border-color: lavenderblush;
+            
+        }
+        .quality{
+            background: url('./tailor.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 50px 60px;
+            text-align: center;
+            opacity: 0.8;
+    }
+    
+    .quality p{
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 19px;
+    }
+
+    .suit{   
+        display: flex;
+        gap: 14px;
+        padding-bottom: 50px;
+        justify-content: center;
+       
+    }
+    .suits{   
+        display: flex;
+        gap: 14px;
+        padding-bottom: 50px;
+        justify-content: center;
+    }
+      
+    .suit img{
+        height: 180px;
+        width: 200px;
+        
+    }
+    .suits img{
+        height: 180px;
+        width: 200px;
+    }
+        
+    .visit{
+        background-color: rgb(139, 49, 49);
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        
+    }
+    .visit button{
+        background-color: white;
+            color: rgb(132, 42, 42);
+            width: 220px;
+            height: 30px;
+            border: none;
+            font-weight: bold;
+    }
+    .testimonial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    
+    }
+    .testimonial button{
+        background-color: rgb(224, 220, 220);
+        border: none;
+        width: 550px;
+        padding: 35px;
+        max-width: 90%;
+        
+    }
+    .testimonial img{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        justify-content: center;
+        
+    }
+    .bottom{
+        background-color:rgb(31, 29, 29) ;
+        height: 70px;
+        text-align: center;
+        gap: 50px;
+        padding-top: 30px;
+        color: white;
+    }
+    @media (max-width:800px){
+        .navbar{
+            display: flex;
+            flex-direction: column;
+        }
+        .design{
+            display: flex;
+            flex-direction: column;
+        }
+        .section{
+            display: flex;
+            flex-direction: column;
+        }
+        .suit{
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px;
+        }
+        .suits{
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px;
+        }
+        .testimonial{
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+    }
+     
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav">
+        <ul>
+            <li style="color: rgb(150, 45, 45)
+            ;font-weight: bold; font-size: 24px; padding-right: 400px;">
+                <i class="fa-solid fa-bullseye fa-lg" style="padding-top: 14px;"></i>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <u>tailor</u></li>
+            <li style="padding-top: 8px;">Call us for free!</li>
+            <li style="padding-top: 8px;color: rgb(150, 45, 45)
+            ;font-weight: bold;">0-000-000-0000</li>
+        </ul>
+    </div>
+    </div>
+    
+    <div class="design">
+        <div class="design-text">
+        <h2>TAILOR SHOP MADE<BR> FOR GENTLEMAN</h2>
+            <p style="color: white;">Loreum ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <button>START DESIGNING</button>
+            </div>
+            <img src="./modelss.png.png" alt="">
+        </div>
+        <div class="section">
+            <button style=" gap: 40px;padding-top: 5px;">
+                <i class="fa-solid fa-eye fa-xl" style="color: #c02626;"></i>
+                <h3>COME SEE US</h3>
+            <P>explanation with extra speaking points for your presentation on Data Structures and Algorithms</P>
+            </button>
+            <button style="padding-top: 5px;">
+                <i class="fa-solid fa-folder-open fa-xl" style="color: #a62646;"></i>
+                <h3>MAKE IT YOUR OWN</h3>
+            <P>explanation with extra speaking points for your presentation on Data Structures and Algorithms</P>
+            </button>
+            <button style="padding-top: 5px;">
+                <i class="fa-solid fa-person-dress fa-xl" style="color: #b03030;"></i>
+                <h3>PERFECT THE FIT</h3>
+            <P>explanation with extra speaking points for your presentation on Data Structures and Algorithms</P>
+            </button>
+        </div>
+        <div class="quality">
+            <h1>AMAZING QUALITY</h1>
+            <p>Lorem Ipsum is a type of placeholder text used in publishing, graphic design, and web development to fill spaces in a layout before the actual content is ready.It looks like natural language but doesn’t distract the reader</p>
+            <i class="fa-solid fa-play fa-2xl" style="color: #ebedef;"></i>
+        </div>
+        <div class="six">
+            <h1 style="text-align: center;">POPULAR CHOICES ON CUSTOM SUITS</h1>
+        <div class="suit" style=" padding-bottom: 20px;">
+            <img src="./suit1.jpg" alt="">
+            <img src="./suit2.jpg" alt="">
+            <img src="./suit3.jpg" alt="">
+        </div>
+        <div class="suits">
+            <img src="./suit4.jpg" alt="">
+            <img src="./suit5.jpg" alt="">
+            <img src="./suit6.jpg" alt="">
+        </div>
+        </div>
+        <div class="visit">
+            <h2>VISIT US OUR CENTER</h2>
+            <p>MON to SAT 9:30 AM - 9:00 PM<BR>
+            SUN 11:00 AM - 7:00 PM</p>
+            <h5>GRAND OPENING ON APRIL 6</h5>
+            <button>BOOK AN APPOINTMENT</button>
+        </div>
+        <div class="testimonial">
+            <h2>OUR TESTIMONIALS</h2>
+            <button>
+             Lorem Ipsum is a type of placeholder text used in publishing, 
+             graphic design, and web development to fill spaces in a layout before the actual content is ready.
+             It’s used as a placeholder when the actual content is not yet available, so
+             designers can focus on how a page looks rather than on what it says.    
+            </button>
+            <br><br>
+            <div>
+            <img src="./suit3.jpg" alt="">
+            <h4>Rohit sharma</h4>
+        </div>
+        </div>
+        <div class="bottom">
+            <i class="fa-brands fa-facebook fa-lg" style="color: #edeff2;"></i>
+            <i class="fa-brands fa-twitter fa-lg" style="color: #ededed;"></i>
+            <i class="fa-brands fa-pinterest fa-xl" style="color: #f5f5f5;"></i>
+            <i class="fa-brands fa-youtube fa-lg" style="color: #e8eaee;"></i>
+            <i class="fa-regular fa-camera fa-lg" style="color: #f0f0f0;"></i>
+            <p>@ Copyright Lorem 2020.All Right Reserved</p>
+        </div>
+
+        
+    
+    
+</body>
+</html>
+
+ 
+
